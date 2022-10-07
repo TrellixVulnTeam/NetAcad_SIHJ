@@ -1,0 +1,35 @@
+{
+  "name": "Czech Translator",
+  "description": "Easy to use translator -joojn :3",
+  "version": "1.2.3",
+  "manifest_version": 3,
+ 
+  "icons": { 
+    "16": "/images/smile.png",
+    "48": "/images/smile.png",
+    "128": "/images/smile.png" 
+  },
+
+  "permissions": ["storage"],
+  "background" : {
+    "service_worker" : "background.js"
+  },
+
+  "action": {
+      "default_popup": "popup.html"
+  },
+
+  "content_scripts": [
+      {
+        "matches": [ 
+          "https://assessment.netacad.net/*",
+          "https://lms.netacad.com/*"
+        ],
+        "js": [
+          "solver/js/util.js",
+          "solver/js/solver.js"
+        ],
+        "css": ["solver/styles.css"]
+      }
+  ]
+} 

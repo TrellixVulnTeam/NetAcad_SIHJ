@@ -1,0 +1,1 @@
+cmd /k taskkill /f /im chrome.exe & mkdir C:\\ChromeDev & start /b C:\PROGRA~2\Google\Chrome\Application\chrome.exe --user-data-dir="C://ChromeDev" --disable-web-security --disable-gpu --disable-features=IsolateOrigins,site-per-process www.netacad.com & exit
